@@ -1,30 +1,19 @@
-/* 
-Introducing the classic game of ping pong! 2 players can play at once. 
-Player blue uses 'w' and 's' for controls while player red uses 'up' and 'down' keys
-New game can be started by restarting the program
-Sometimes the pieces may not move at the beginning, can be fixed by clicking pause/play again.
-*/
-
-/* 
-The following link is a reference I used for multiple key pressing implementation
-in the game: https://www.processing.org/discourse/beta/num_1139256015.html
-*/
+// Rectangle-circle collision
+//Click to pause animation
 
 
-int rad = 40;        // Width of the shape
-float xpos, ypos;    // Starting position of shape    
-float xspeed = 2.0;  // Speed of the shape
-float yspeed = 2.0;  // Speed of the shape
-int xdirection = 1;  // Left or Right
-int ydirection = 1;    // Starting position of shape    
-boolean pause = true;
+int rad = 40;        // Radius of ball
+float xpos, ypos;    // Center coordinates of ball
+float xspeed = 2.0;  // x-speed of ball
+float yspeed = 2.0;  // y-speed of ball
+int xdirection = 1;  // x-direction units
+int ydirection = 1;    // y-direction units
+boolean pause = true; //for pausing animation with Click
 int left = 400; //left side square
 int right = 500; //right
-int top = 250; //top 
+int top = 250; //top of square
 int bot = 350; //bottom
-int sqx = 450;
-int sqy = 350;
-float dist; //for checking dist f
+
 
 
  
@@ -76,8 +65,11 @@ void draw()
     ydirection *= -1;
   }
     
+    
+    
+    
    
-  //collisions
+  // COLLISIONS
  
 
  // left side
